@@ -22,9 +22,10 @@ class Field extends Component {
 						id={this.props.name}
 						placeholder={this.props.placeholder}
 						required='required'
-						data-validation-required-message='Please enter a message.'
+						data-validation-required-message={this.props.message}
 						name={this.props.name}
 						onBlur={this.props.onBlur}
+						onChange={this.props.onChange}
 					/>
 				)}
 

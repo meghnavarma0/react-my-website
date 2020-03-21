@@ -55,9 +55,9 @@ class Contact extends Component {
 					<div className='row'>
 						<div className='col-lg-12'>
 							<form
-								id='contactForm'
+								// id='contactForm'
 								name='sentMessage'
-								novalidate='novalidate'
+								noValidate='novalidate'
 								onSubmit={this.props.handleSubmit}
 							>
 								<div className='row'>
@@ -115,9 +115,8 @@ class Contact extends Component {
 									)}
 									<div className='clearfix'></div>
 									<div className='col-lg-12 text-center'>
-										<div id='success'></div>
+										{/* <div id='success'></div> */}
 										<button
-											id='sendMessageButton'
 											className='btn btn-primary btn-xl text-uppercase'
 											type='submit'
 										>
@@ -154,8 +153,8 @@ export default withFormik({
 			.max(15, 'Your phone no. is too long!')
 			.required('We need your phone no. to reach you at!'),
 		message: Yup.string()
-			.min(50, 'You need to provide us more detailed information')
-			.max(540, 'maximum is this')
+			.min(10, 'You need to provide us more detailed information')
+			.max(100, 'maximum is this')
 			.required('Please send us a message in detail')
 	}),
 
