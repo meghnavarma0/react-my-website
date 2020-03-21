@@ -154,7 +154,8 @@ export default withFormik({
 			.max(15, 'Your phone no. is too long!')
 			.required('We need your phone no. to reach you at!'),
 		message: Yup.string()
-			.min(500, 'You need to provide us more detailed information')
+			.min(50, 'You need to provide us more detailed information')
+			.max(540, 'maximum is this')
 			.required('Please send us a message in detail')
 	}),
 
